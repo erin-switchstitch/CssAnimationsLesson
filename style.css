@@ -37,7 +37,7 @@ The overall timing is set inside the h1 element under animation-duration */
 h1{
     position: relative;
     height: 200px;
-    width: 200px;
+    width: 250px;
     background-color: red;
 
     /* We must link the keyframes settings to the element to be animated: */
