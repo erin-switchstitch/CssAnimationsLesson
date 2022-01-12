@@ -62,11 +62,11 @@ The overall timing is set inside the h1 element under animation-duration */
 
 /* Here is a quick cheat to get around CSS' native lack of support for onClick */
 
-h1:active {
+/* h1:active {
   background-color: pink;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
-}
+} */
 
 
 /* Another way to do this would be to write a javascript function that triggers
