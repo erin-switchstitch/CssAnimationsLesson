@@ -1,0 +1,77 @@
+/* There are a number of different animation effects natively in CSS that can prove
+to be very useful. These can be used within keyframes:
+
+transform: rotate(deg); --- will rotate the element
+transform: translate(x, y); --- will move the element 
+transform: scale(factor); -- will grow / shrink the element */
+
+
+
+/* The name of this keyframes is firstExample, it is not applied to our H1 element
+until with reference it inside the h1 element's styling under animation-name*/
+@keyframes firstExample {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+
+/* Here we have set the color to change depending on how far it is through the animation
+The overall timing is set inside the h1 element under animation-duration */
+@keyframes secondExample {
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
+}
+
+/* We can put multiple properties inside a single sequence*/
+@keyframes thirdExample {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:purple; left:0px; top:0px;}
+}
+
+
+
+h1{
+    position: relative;
+    height: 200px;
+    width: 200px;
+    background-color: red;
+
+    /* We must link the keyframes settings to the element to be animated: */
+    animation-name: thirdExample;
+    
+    /* This will change how long the animation runs for : */
+    animation-duration: 4s;
+
+    /* This will change how long after load that the animation runs : */
+    animation-delay: 2s;
+
+    /* This will change how many times the animation will run : */
+    animation-iteration-count: 1;
+
+    /* As you may of noticed when the animation is finished, the background
+    color reverts to the style set in the element. However we can override 
+    this : (none, forwards, backwards, both)*/
+    animation-fill-mode: none;
+
+}
+
+
+/* Here is a quick cheat to get around CSS' native lack of support for onClick */
+
+h1:active {
+  background-color: pink;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+/* Another way to do this would be to write a javascript function that triggers
+onClick and then adds a className to the h1 element with specific styling inside it
+that is then applied when the element is clicked.
+
+There is another hack within pure CSS to simulate an onClick event with the use of a
+checkbox: https://stackoverflow.com/questions/13630229/can-i-have-an-onclick-effect-in-css*/
