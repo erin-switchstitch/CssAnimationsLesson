@@ -34,7 +34,7 @@ The overall timing is set inside the h1 element under animation-duration */
 
 
 
-h1{
+/* h1{
     position: relative;
     height: 200px;
     width: 250px;
@@ -57,7 +57,7 @@ h1{
     this : (none, forwards, backwards, both)*/
     animation-fill-mode: none;
 
-}
+} */
 
 
 /* Here is a quick cheat to get around CSS' native lack of support for onClick */
